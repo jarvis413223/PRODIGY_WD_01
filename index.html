@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        #navbar a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        section#intro {
+            background-color: #fff;
+            color: #333;
+        }
+
+        section#features {
+            background-color: #f8f8f8;
+        }
+
+        section#packages {
+            background-color: #fff;
+            color: #333;
+        }
+
+        section#contact {
+            background-color: #f8f8f8;
+        }
+
+        h1, h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .tour-package {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            width: 30%;
+            text-align: left;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .tour-package {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href="#intro">Home</a>
+        <a href="#features">Features</a>
+        <a href="#packages">Tour Packages</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <section id="intro">
+        <h1>Explore Amazing Tours with Us</h1>
+        <p>Discover breathtaking destinations and create memories that will last a lifetime.</p>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <p>Why choose our tours?</p>
+        <p>Explore unique features such as:</p>
+        <ul style="list-style: none;">
+            <li>Expert Guides</li>
+            <li>Customized Itineraries</li>
+            <li>Comfortable Accommodations</li>
+            <li>Local Cuisine Experiences</li>
+        </ul>
+    </section>
+
+    <section id="packages">
+        <h2>Tour Packages</h2>
+        <div class="tour-package">
+            <h3>City Explorer</h3>
+            <p>Discover the hidden gems of vibrant cities.</p>
+            <p>Price: $999</p>
+        </div>
+        <div class="tour-package">
+            <h3>Nature Retreat</h3>
+            <p>Immerse yourself in the beauty of nature.</p>
+            <p>Price: $1299</p>
+        </div>
+        <div class="tour-package">
+            <h3>Cultural Odyssey</h3>
+            <p>Experience rich cultural traditions and history.</p>
+            <p>Price: $1499</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Ready to book your next adventure? Contact us for more information or to reserve your spot.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 0) {
+                navbar.style.backgroundColor = "#555";
+            } else {
+                navbar.style.backgroundColor = "#333";
+            }
+        });
+    </script>
+</body>
+</html>
